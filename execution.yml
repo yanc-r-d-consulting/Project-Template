@@ -8,11 +8,7 @@ Choose Flight:
  requests:
   -label: testdemo
    method: GET
-   url: http://testdemo.com
+   url: http://34.73.245.35
   -label: reserve
    method: POST
-   url: http://testdemo.com/reserve.php
-   body:
-     fromPost: Paris
-     toPost: Delhi
-   
+ 
