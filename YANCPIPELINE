@@ -3,7 +3,17 @@ pipeline {
     stages {
         stage('Stage 1') {
             steps {
-                echo 'Hello world!' 
+                sh '''
+			        cd your/development/folder/
+			        git clone https://github.com/yanc-r-d-consulting/Project-Template.git
+			        cp Jenkins/workspace/*.jar .
+			        ls -lrt
+			        git add *.jar
+			        git commit -m "Committing jar file to git" *.jar
+			        git log
+			        git remote add origin https://github.com/yanc-r-d-consulting/Project-Template.git
+			        git push -u origin master
+		        '''
             }
         }
     }
